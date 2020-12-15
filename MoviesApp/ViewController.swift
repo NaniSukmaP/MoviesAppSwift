@@ -9,11 +9,11 @@ import UIKit
 class ViewController: UIViewController , UIActionSheetDelegate{
     
     var movies  = MoviesModel()
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(MoviesCell.self, forCellReuseIdentifier: MoviesCell.identifier)
-        return tableView
-    }()
+//    lazy var tableView: UITableView = {
+//        let tableView = UITableView()
+//        tableView.register(MoviesCell.self, forCellReuseIdentifier: MoviesCell.identifier)
+//        return tableView
+//    }()
     
     let display = MainView()
     
@@ -25,7 +25,8 @@ class ViewController: UIViewController , UIActionSheetDelegate{
         navigationItem.rightBarButtonItem  = button1
 
         view = MainView()
-        
+        display.tableView.dataSource = self
+        display.tableView.delegate = self
     }
     override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
