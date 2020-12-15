@@ -7,8 +7,7 @@
 
 import UIKit
 class MoviesCell : UITableViewCell {
-//    var delegate : ProductCellDelegate?
-//    let minValue = 0
+
     static let identifier = "MoviesCell"
     var moviesData : MoviesData? {
         didSet {
@@ -70,13 +69,6 @@ class MoviesCell : UITableViewCell {
         horizontal.distribution = .fillProportionally
         return horizontal
     }()
-//    private func setupVerticalStack(){
-//        let contentStack = UIStackView(arrangedSubviews: [titleMoviesLabel,releaseMoviesLabel,reviewMoviesLabel])
-//         addSubview(contentStack)
-//        contentStack.distribution = .fillProportionally
-//        contentStack.axis = .vertical
-//        contentStack
-//    }
     
     private func setUpView(){
         contentView.addSubview(horizontalStack)

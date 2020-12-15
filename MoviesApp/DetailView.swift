@@ -62,13 +62,6 @@ class DetailView: UIView {
         horizontal.distribution = .fillProportionally
         return horizontal
     }()
-//    private func setupVerticalStack(){
-//        let contentStack = UIStackView(arrangedSubviews: [titleMoviesLabel,releaseMoviesLabel,reviewMoviesLabel])
-//         addSubview(contentStack)
-//        contentStack.distribution = .fillProportionally
-//        contentStack.axis = .vertical
-//        contentStack
-//    }
     
     private func setUpView(){
         self.addSubview(horizontalStack)
@@ -91,7 +84,6 @@ class DetailView: UIView {
                                      verticalStcak.leadingAnchor.constraint(equalTo: imageMovies.trailingAnchor, constant: 20),
                                      verticalStcak.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5),
                                      verticalStcak.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6)])
-//        verticalStcak.anchor(top: topAnchor, bottom: bottomAnchor, leading: imageMovies.trailingAnchor, trailing: safeAreaLayoutGuide.trailingAnchor, marginTop: 5, marginBottom: -250, marginLeading: 10, marginTrailing: -10, width: frame.width * 0.6, height: frame.height * 0.5, centerX: nil, centerY: nil, marginFromCenterX: 0, marginFromCenterY: 0)
 //
     }
     private func setupHorizontalStack(){
@@ -102,7 +94,7 @@ class DetailView: UIView {
                                      horizontalStack.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
                                      horizontalStack.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5),
                                      horizontalStack.widthAnchor.constraint(equalTo: widthAnchor)])
-//        horizontalStack.anchor(top: topAnchor, bottom: bottomAnchor, leading: safeAreaLayoutGuide.leadingAnchor, trailing: safeAreaLayoutGuide.trailingAnchor, marginTop: 5, marginBottom: -200, marginLeading: 10, marginTrailing: -10, width: frame.width, height: frame.height * 0.5, centerX: nil, centerY: nil, marginFromCenterX: 0, marginFromCenterY: 0)
+
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
